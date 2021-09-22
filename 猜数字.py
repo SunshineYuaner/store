@@ -5,6 +5,7 @@ count = 3
 
 while count > 0 :
     num = int(input("请猜一个我心里想的数字："))
+    print(ran)
     if num == ran:
         print("太棒了，恭喜你猜对了")
         moneyall = moneyall + 10
