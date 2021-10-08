@@ -1,6 +1,6 @@
 import random
 from DBUtils import update
-from DBUtils import query
+from DBUtils import select
 
 print("*****************************")
 print("*        中国工商银行         *")
@@ -22,13 +22,13 @@ MONEY_INIT = 0
 # 添加用户
 def useradd():
     # 判断用户库是否已满
-    s = query("select * from user")
+    s = select("select * from user")
     if len(s) == 100:
         return 3
     # 判断用户是否存在
     while True:
         username = input("请输入您的姓名：")
-        uname = query("select username from user")
+        uname = select("select username from user")
         for item in uname:
             if username == item['username']:
                 return 2
@@ -44,7 +44,7 @@ def useradd():
         account = str(random.randint(10, 99)) + str(
             random.randint(10, 99)) + str(
             random.randint(10, 99)) + str(random.randint(10, 99))
-        accounts = query("select account from user")
+        accounts = select("select account from user")
 
         for item in accounts:
             if account == item['account']:
@@ -57,7 +57,7 @@ def useradd():
             country, province,
             street, house_number, MONEY_INIT,
             BANK_NAME))
-    info1 = query("select * from user where account=%s", (account,), 1)
+    info1 = select("select * from user where account=%s", (account,), 1)
     print(info1)
     return info1
 
@@ -66,12 +66,12 @@ def useradd():
 def login():
     while True:
         acc = int(input("请输入您的账号"))
-        accounts = query("select account from user")
+        accounts = select("select account from user")
         for item in accounts:
             if acc == item['account']:
                 while True:
                     pwd = input("请输入密码：")
-                    info1 = query("select * from user where "
+                    info1 = select("select * from user where "
                                   "account=%s", (acc,), 1)
                     if pwd == info1['PASSWORD']:
                         return {"flag": 1, 'info': info1}
@@ -191,7 +191,7 @@ while True:
             while True:
                 acc2 = input("请输入您要转账的账户：")
                 # 判断转入账户是否存在
-                y = query("select * from user where account=%s",
+                y = select("select * from user where account=%s",
                           (acc2,), 1)
                 if y:
                     # 判断转出和转入账户是否相同

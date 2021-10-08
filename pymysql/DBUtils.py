@@ -17,7 +17,7 @@ def update(sql, params):
     cursor.execute(sql, params)
     close(connect, cursor)
 
-def query(sql, parmas=[], size=0):
+def select(sql, parmas=[], size=0):
     connect = pymysql.connect(host=host, user=user, password=password,
                               database=database, charset='utf8')
     cursor = connect.cursor(cursor=pymysql.cursors.DictCursor)
