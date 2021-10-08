@@ -5,6 +5,7 @@ from DBUtils import select
 BANK_NAME = "中国工商银行"
 MONEY_INIT = 0
 
+
 # 添加用户
 def useradd():
     # 判断用户库是否已满
@@ -43,9 +44,10 @@ def useradd():
             country, province,
             street, house_number, MONEY_INIT,
             BANK_NAME))
-    info1 = select("select * from user where account=%s", (account,), 1)
+    info1 = select("select * from user where account=%s", account, 1)
     print(info1)
     return info1
+
 
 # 登录方法
 def login():
@@ -57,7 +59,7 @@ def login():
                 while True:
                     pwd = input("请输入密码：")
                     info1 = select("select * from user where "
-                                  "account=%s", (acc,), 1)
+                                   "account=%s", (acc,), 1)
                     if pwd == info1['PASSWORD']:
                         return {"flag": 1, 'info': info1}
                     else:
@@ -65,6 +67,7 @@ def login():
             else:
                 continue
         return 3
+
 
 while True:
     print("==============================================")
@@ -184,7 +187,7 @@ while True:
                 acc2 = input("请输入您要转账的账户：")
                 # 判断转入账户是否存在
                 y = select("select * from user where account=%s",
-                          (acc2,), 1)
+                           (acc2,), 1)
                 if y:
                     # 判断转出和转入账户是否相同
                     if acc2 != acc1:

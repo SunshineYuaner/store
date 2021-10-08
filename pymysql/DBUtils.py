@@ -5,10 +5,12 @@ user = 'root'
 password = ''
 database = 'bank'
 
+
 def close(con, cur):
     con.commit()
     cur.close()
     con.close()
+
 
 def update(sql, params):
     connect = pymysql.connect(host=host, user=user, password=password,
@@ -16,6 +18,7 @@ def update(sql, params):
     cursor = connect.cursor(cursor=pymysql.cursors.DictCursor)
     cursor.execute(sql, params)
     close(connect, cursor)
+
 
 def select(sql, parmas=[], size=0):
     connect = pymysql.connect(host=host, user=user, password=password,
