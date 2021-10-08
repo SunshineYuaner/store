@@ -2,22 +2,8 @@ import random
 from DBUtils import update
 from DBUtils import select
 
-print("*****************************")
-print("*        中国工商银行         *")
-print("*        账户管理系统         *")
-print("*           V1.0            *")
-print("*****************************")
-print("*                           *")
-print("* 1.开户                     *")
-print("* 2.存款                     *")
-print("* 3.取款                     *")
-print("* 4.转账                     *")
-print("* 5.查询                     *")
-print("* 6.退出                     *")
-print("*****************************")
 BANK_NAME = "中国工商银行"
 MONEY_INIT = 0
-
 
 # 添加用户
 def useradd():
@@ -61,7 +47,6 @@ def useradd():
     print(info1)
     return info1
 
-
 # 登录方法
 def login():
     while True:
@@ -81,12 +66,19 @@ def login():
                 continue
         return 3
 
-
 while True:
+    print("==============================================")
+    print("|------------中国工商银行账户管理系统------------|")
+    print("|------------1、开户              ------------|")
+    print("|------------2、存钱              ------------|")
+    print("|------------3、取钱              ------------|")
+    print("|------------4、转账              ------------|")
+    print("|------------5、查询              ------------|")
+    print("|------------6、退出              ------------|")
+    print("==============================================")
     step = input("请选择业务：")
     if step == "1":
         info = useradd()
-        print(type(info))
         # 如果开户成功，打印用户信息
         if isinstance(info, dict):
             profile = '''
