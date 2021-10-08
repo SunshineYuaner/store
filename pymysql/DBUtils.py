@@ -1,23 +1,14 @@
-#!/usr/bin/python3
-# encoding='utf-8'
-# author:weibk
-# @time:2021/10/6 19:18
-
-
 import pymysql
-
 
 host = 'localhost'
 user = 'root'
 password = ''
 database = 'bank'
 
-
 def close(con, cur):
     con.commit()
     cur.close()
     con.close()
-
 
 def update(sql, params):
     connect = pymysql.connect(host=host, user=user, password=password,
@@ -25,7 +16,6 @@ def update(sql, params):
     cursor = connect.cursor(cursor=pymysql.cursors.DictCursor)
     cursor.execute(sql, params)
     close(connect, cursor)
-
 
 def query(sql, parmas=[], size=0):
     connect = pymysql.connect(host=host, user=user, password=password,

@@ -1,5 +1,6 @@
 import random
-from DBUtils import update, query
+from DBUtils import update
+from DBUtils import query
 
 print("*****************************")
 print("*        中国工商银行         *")
