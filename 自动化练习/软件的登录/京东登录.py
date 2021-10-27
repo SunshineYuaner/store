@@ -18,10 +18,10 @@ wd.maximize_window()
 wd.find_element(By.XPATH,"//*[@clstag='pageclick|keycount|login_pc_201804112|10']").click()
 
 # 输入账户
-wd.find_element(By.XPATH,"//*[@id='loginname']").send_keys("17671214523")
+wd.find_element(By.XPATH,"//*[@id='loginname']").send_keys("17671214525")
 
 # 输入密码
-wd.find_element(By.XPATH,'//*[@id="nloginpwd"]').send_keys("Hw000727.")
+wd.find_element(By.XPATH,'//*[@id="nloginpwd"]').send_keys("Hw000727")
 
 # 点击登录
 wd.find_element(By.XPATH,'//*[@id="loginsubmit"]').click()

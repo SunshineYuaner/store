@@ -16,10 +16,10 @@ wd.get("https://passport.bilibili.com/login")
 wd.maximize_window()
 
 # 输入账号
-wd.find_element(By.XPATH,'//*[@id="login-username"]').send_keys("17671214523")
+wd.find_element(By.XPATH,'//*[@id="login-username"]').send_keys("17671214525")
 
 # 输入密码
-wd.find_element(By.XPATH,'//*[@id="login-passwd"]').send_keys("Hw000727.")
+wd.find_element(By.XPATH,'//*[@id="login-passwd"]').send_keys("Hw000727")
 
 # 点击登录
 wd.find_element(By.XPATH,'//*[@class="btn btn-login"]').click()

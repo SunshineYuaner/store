@@ -19,10 +19,10 @@ wd.maximize_window()
 wd.find_element(By.XPATH,'//*[@class="SignFlow-tab"]').click()
 
 # 输入账号
-wd.find_element(By.XPATH,'//*[@placeholder="手机号或邮箱"]').send_keys("17671214523")
+wd.find_element(By.XPATH,'//*[@placeholder="手机号或邮箱"]').send_keys("17671214525")
 
 # 输入密码
-wd.find_element(By.XPATH,'//*[@placeholder="密码"]').send_keys("Hw000727.")
+wd.find_element(By.XPATH,'//*[@placeholder="密码"]').send_keys("Hw000727")
 
 # 点击登录
 wd.find_element(By.XPATH,'//*[@type="submit"]').click()

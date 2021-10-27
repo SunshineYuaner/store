@@ -19,10 +19,10 @@ wd.maximize_window()
 wd.find_element(By.XPATH,"//*[@class='tab-item']").click()
 
 # 输入账户
-wd.find_element(By.XPATH,"//*[@id='userName']").send_keys("17671214523")
+wd.find_element(By.XPATH,"//*[@id='userName']").send_keys("17671214525")
 
 # 输入密码
-wd.find_element(By.XPATH,"//*[@id='password']").send_keys("Hw000727.")
+wd.find_element(By.XPATH,"//*[@id='password']").send_keys("Hw000727")
 
 # 点击按钮验证
 wd.find_element(By.XPATH,'//*[@id="iar1_sncaptcha_button"]').click()
