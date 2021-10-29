@@ -1,6 +1,6 @@
 from selenium import webdriver
 from unittest import TestCase
-from case import case
+from InitPage import case
 from main import main
 from ddt import ddt
 from ddt import data

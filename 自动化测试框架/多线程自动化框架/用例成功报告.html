@@ -189,8 +189,8 @@ function showOutput(id, name) {
 
 <div class='heading'>
 <h1>用例测试报告</h1>
-<p class='attribute'><strong>Start Time:</strong> 2021-10-29 15:36:32</p>
-<p class='attribute'><strong>Duration:</strong> 0:00:12.748657</p>
+<p class='attribute'><strong>Start Time:</strong> 2021-10-29 15:42:21</p>
+<p class='attribute'><strong>Duration:</strong> 0:00:14.599186</p>
 <p class='attribute'><strong>Status:</strong> Pass 2 Failure 1</p>
 
 <p class='description'>测试详细报告</p>
@@ -237,7 +237,28 @@ function showOutput(id, name) {
 
 <tr id='pt1.2' class='hiddenRow'>
     <td class='none'><div class='testcase'>testcasesuccess_2</div></td>
-    <td colspan='5' align='center'>pass</td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.2')" >
+        pass</a>
+
+    <div id='div_pt1.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.2: .&lt;HTMLTestRunner.HTMLTestRunner.OutputRedirector object at 0x016D8628&gt; 
+Time Elapsed: 0:00:10.090767
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
 </tr>
 
 <tr id='ft1.3' class='none'>
@@ -258,8 +279,8 @@ function showOutput(id, name) {
 ft1.3: Traceback (most recent call last):
   File "D:\Python38-32\lib\site-packages\ddt.py", line 191, in wrapper
     return func(self, *args, **kwargs)
-  File "D:\Users\87306\Desktop\store\自动化测试框架\多线程自动化框架\testnormal.py", line 25, in testcasesuccess
-    self.assertEqual(expect,result)
+  File "D:\Users\87306\Desktop\store\自动化测试框架\多线程自动化框架\testnormal.py", line 26, in testcasesuccess
+    self.assertEqual(expect, result)
 AssertionError: 'Student Login12345' != 'HKR.狼腾测试员综合办公系统'
 - Student Login12345
 + HKR.狼腾测试员综合办公系统
