@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>用例测试报告</title>
+    <title>HKR系统测试报告</title>
     <meta name="generator" content="HTMLTestRunner 0.8.2"/>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     
@@ -188,12 +188,12 @@ function showOutput(id, name) {
 --></script>
 
 <div class='heading'>
-<h1>用例测试报告</h1>
-<p class='attribute'><strong>Start Time:</strong> 2021-10-29 15:42:21</p>
-<p class='attribute'><strong>Duration:</strong> 0:00:14.599186</p>
-<p class='attribute'><strong>Status:</strong> Pass 2 Failure 1</p>
+<h1>HKR系统测试报告</h1>
+<p class='attribute'><strong>Start Time:</strong> 2021-10-29 15:55:12</p>
+<p class='attribute'><strong>Duration:</strong> 0:00:08.072207</p>
+<p class='attribute'><strong>Status:</strong> Pass 2</p>
 
-<p class='description'>测试详细报告</p>
+<p class='description'>HKR系统失败登陆测试</p>
 </div>
 
 
@@ -221,22 +221,22 @@ function showOutput(id, name) {
     <td>View</td>
 </tr>
 
-<tr class='failClass'>
-    <td>testnormal.test1</td>
-    <td>3</td>
+<tr class='passClass'>
+    <td>Test2.TestLogin</td>
     <td>2</td>
-    <td>1</td>
+    <td>2</td>
     <td>0</td>
-    <td><a href="javascript:showClassDetail('c1',3)">Detail</a></td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c1',2)">Detail</a></td>
 </tr>
 
 <tr id='pt1.1' class='hiddenRow'>
-    <td class='none'><div class='testcase'>testcasesuccess_1</div></td>
+    <td class='none'><div class='testcase'>testLoginError_1</div></td>
     <td colspan='5' align='center'>pass</td>
 </tr>
 
 <tr id='pt1.2' class='hiddenRow'>
-    <td class='none'><div class='testcase'>testcasesuccess_2</div></td>
+    <td class='none'><div class='testcase'>testLoginError_2</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
@@ -250,42 +250,7 @@ function showOutput(id, name) {
         </div>
         <pre>
         
-pt1.2: .&lt;HTMLTestRunner.HTMLTestRunner.OutputRedirector object at 0x016D8628&gt; 
-Time Elapsed: 0:00:10.090767
-
-
-        </pre>
-    </div>
-    <!--css div popup end-->
-
-    </td>
-</tr>
-
-<tr id='ft1.3' class='none'>
-    <td class='failCase'><div class='testcase'>testcasesuccess_3</div></td>
-    <td colspan='5' align='center'>
-
-    <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.3')" >
-        fail</a>
-
-    <div id='div_ft1.3' class="popup_window">
-        <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.3').style.display = 'none' " >
-           [x]</a>
-        </div>
-        <pre>
-        
-ft1.3: Traceback (most recent call last):
-  File "D:\Python38-32\lib\site-packages\ddt.py", line 191, in wrapper
-    return func(self, *args, **kwargs)
-  File "D:\Users\87306\Desktop\store\自动化测试框架\多线程自动化框架\testnormal.py", line 26, in testcasesuccess
-    self.assertEqual(expect, result)
-AssertionError: 'Student Login12345' != 'HKR.狼腾测试员综合办公系统'
-- Student Login12345
-+ HKR.狼腾测试员综合办公系统
-
-
+pt1.2: .
 
         </pre>
     </div>
@@ -296,9 +261,9 @@ AssertionError: 'Student Login12345' != 'HKR.狼腾测试员综合办公系统'
 
 <tr id='total_row'>
     <td>Total</td>
-    <td>3</td>
     <td>2</td>
-    <td>1</td>
+    <td>2</td>
+    <td>0</td>
     <td>0</td>
     <td>&nbsp;</td>
 </tr>
