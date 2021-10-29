@@ -1,8 +1,8 @@
 class main:
-    def __init__(self,driver):
+    def __init__(self, driver):
         self.driver = driver
 
-    def login(self,username,passwork):
+    def login(self, username, passwork):
         self.driver.get("http://localhost:8080/HKR")
         self.driver.maximize_window()
         self.driver.find_element_by_xpath('/html/body/div/div/div[2]/form/div/input[2]').send_keys(username)

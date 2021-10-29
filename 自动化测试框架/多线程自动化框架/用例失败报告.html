@@ -189,11 +189,11 @@ function showOutput(id, name) {
 
 <div class='heading'>
 <h1>用例测试报告</h1>
-<p class='attribute'><strong>Start Time:</strong> 2021-10-29 13:51:34</p>
-<p class='attribute'><strong>Duration:</strong> 0:00:12.938498</p>
-<p class='attribute'><strong>Status:</strong> Pass 2 Failure 1</p>
+<p class='attribute'><strong>Start Time:</strong> 2021-10-29 15:36:32</p>
+<p class='attribute'><strong>Duration:</strong> 0:00:08.081807</p>
+<p class='attribute'><strong>Status:</strong> Pass 2</p>
 
-<p class='description'>测试</p>
+<p class='description'>测试详细报告</p>
 </div>
 
 
@@ -221,50 +221,36 @@ function showOutput(id, name) {
     <td>View</td>
 </tr>
 
-<tr class='failClass'>
-    <td>testnormal.test1</td>
-    <td>3</td>
+<tr class='passClass'>
+    <td>testerror.test2</td>
     <td>2</td>
-    <td>1</td>
+    <td>2</td>
     <td>0</td>
-    <td><a href="javascript:showClassDetail('c1',3)">Detail</a></td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c1',2)">Detail</a></td>
 </tr>
 
 <tr id='pt1.1' class='hiddenRow'>
-    <td class='none'><div class='testcase'>testcasesuccess_1</div></td>
+    <td class='none'><div class='testcase'>testcasserror_1</div></td>
     <td colspan='5' align='center'>pass</td>
 </tr>
 
 <tr id='pt1.2' class='hiddenRow'>
-    <td class='none'><div class='testcase'>testcasesuccess_2</div></td>
-    <td colspan='5' align='center'>pass</td>
-</tr>
-
-<tr id='ft1.3' class='none'>
-    <td class='failCase'><div class='testcase'>testcasesuccess_3</div></td>
+    <td class='none'><div class='testcase'>testcasserror_2</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.3')" >
-        fail</a>
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.2')" >
+        pass</a>
 
-    <div id='div_ft1.3' class="popup_window">
+    <div id='div_pt1.2' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.3').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.2').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-ft1.3: Traceback (most recent call last):
-  File "D:\Python38-32\lib\site-packages\ddt.py", line 191, in wrapper
-    return func(self, *args, **kwargs)
-  File "D:\Users\87306\Desktop\新建文件夹\testnormal.py", line 25, in testcasesuccess
-    self.assertEqual(expect,result)
-AssertionError: 'Student Login12345' != 'HKR.狼腾测试员综合办公系统'
-- Student Login12345
-+ HKR.狼腾测试员综合办公系统
-
-
+pt1.2: .
 
         </pre>
     </div>
@@ -275,9 +261,9 @@ AssertionError: 'Student Login12345' != 'HKR.狼腾测试员综合办公系统'
 
 <tr id='total_row'>
     <td>Total</td>
-    <td>3</td>
     <td>2</td>
-    <td>1</td>
+    <td>2</td>
+    <td>0</td>
     <td>0</td>
     <td>&nbsp;</td>
 </tr>

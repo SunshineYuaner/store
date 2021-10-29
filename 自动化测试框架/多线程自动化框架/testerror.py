@@ -5,6 +5,7 @@ from main import main
 from ddt import ddt
 from ddt import data
 
+
 @ddt
 class test2(TestCase):
     @data(*case.login_error_data)

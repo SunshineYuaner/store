@@ -1,7 +1,7 @@
 class case:
     login_success_data = [
         {"username": "jason", "passwork": "1234567", "expect": "Student Login"},
-        {"username":"admin","passwork":"root","expect":"Student Login"},
+        {"username": "admin", "passwork": "root", "expect": "Student Login"},
         {"username": "jason", "passwork": "root", "expect": "Student Login12345"}
     ]
 

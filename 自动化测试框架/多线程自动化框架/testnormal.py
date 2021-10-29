@@ -5,21 +5,22 @@ from main import main
 from ddt import ddt
 from ddt import data
 
+
 @ddt
 class test1(TestCase):
 
     @data(*case.login_success_data)
-    def testcasesuccess(self,testdata):
+    def testcasesuccess(self, testdata):
         username = testdata["username"]
         passwork = testdata["passwork"]
         expect = testdata["expect"]
 
         driver = webdriver.Chrome()
         loginop = main(driver)
-        loginop.login(username,passwork)
+        loginop.login(username, passwork)
 
         result = loginop.getSuccess_result()
         if result != expect:
             driver.save_screenshot("img/error.png")
         driver.quit()
-        self.assertEqual(expect,result)
+        self.assertEqual(expect, result)
