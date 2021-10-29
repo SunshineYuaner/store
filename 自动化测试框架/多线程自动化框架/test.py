@@ -12,7 +12,7 @@ class execute(Thread):
     def run(self) -> None:
         runner = HTMLTestRunner.HTMLTestRunner(
             title = "用例测试报告",
-            description = "测试",
+            description = "测试详细报告",
             verbosity = 1,
             stream = open(f'{self.html_file}',mode="w+",encoding="utf-8")
         )
