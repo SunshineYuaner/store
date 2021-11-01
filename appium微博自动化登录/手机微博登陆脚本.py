@@ -13,20 +13,31 @@ data = {
 
 driver = webdriver.Remote("http://localhost:4723/wd/hub",data)
 
-time.sleep(8)
-el1 = driver.find_element_by_id("com.sina.weibo:id/titleBack")
-el1.click()
-# el2 = driver.find_element_by_id("com.sina.weibo:id/btn_change_account")
-# el2.click()
-el3 = driver.find_element_by_id("com.sina.weibo:id/iv_login_view_protocol")
-el3.click()
-el4 = driver.find_element_by_id("com.sina.weibo:id/btn_for_sms_login")
-el4.click()
-el5 = driver.find_element_by_id("com.sina.weibo:id/iv_psw")
-el5.click()
-el6 = driver.find_element_by_id("com.sina.weibo:id/et_login_view_uname")
-el6.send_keys("17671214523")
-el7 = driver.find_element_by_id("com.sina.weibo:id/et_login_view_psw")
-el7.send_keys("Hw000727.")
-el8 = driver.find_element_by_id("com.sina.weibo:id/btn_login_view_psw")
-el8.click()
+# 弹窗广告
+el1 = driver.find_element_by_xpath(
+    "/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.LinearLayout[2]/android.widget.LinearLayout/android.widget.TextView[3]").click()
+time.sleep(3)
+# 系统权限设置
+el2 = driver.find_element_by_id("com.android.permissioncontroller:id/permission_allow_button").click()
+time.sleep(1)
+# 点击登录
+el3 = driver.find_element_by_id("com.sina.weibo:id/titleBack").click()
+time.sleep(1)
+# 点击同意协议
+el4 = driver.find_element_by_id("com.sina.weibo:id/iv_login_view_protocol").click()
+time.sleep(1)
+# 点击其他手机登录
+el5 = driver.find_element_by_id("com.sina.weibo:id/btn_for_sms_login").click()
+time.sleep(1)
+# 点击选择账号密码登录
+el6 = driver.find_element_by_id("com.sina.weibo:id/iv_psw").click()
+time.sleep(1)
+# 输入账号
+el7 = driver.find_element_by_id("com.sina.weibo:id/et_login_view_uname").send_keys("17671214523")
+time.sleep(0.5)
+# 输入密码
+el8 = driver.find_element_by_id("com.sina.weibo:id/et_login_view_psw").send_keys("Hw000727.")
+time.sleep(0.5)
+# 点击登录
+el9 = driver.find_element_by_id("com.sina.weibo:id/btn_login_view_psw").click()
+time.sleep(3)
