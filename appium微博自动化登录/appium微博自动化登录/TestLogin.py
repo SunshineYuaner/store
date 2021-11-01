@@ -26,6 +26,7 @@ class TestLogin(TestCase):
             "skipServerInstallation": True,
         }
         driver = webdriver.Remote("http://localhost:4723/wd/hub", data)
+        driver.implicitly_wait(8)
         loginop = LoginOperation(driver)
 
         loginop.login(username, pwd)
